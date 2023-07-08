@@ -1,6 +1,61 @@
 <?php
+
+//$array = [];
+//for ($i = 0; $i < 10; $i++) {
+//    $array[$i] = 'x';
+//}
 //
+//var_dump($array);
+
+//$array = [];
+//for ($i = 0; $i < 10; $i++) {
+//    $array[$i] = rand(1,10);
+//}
 //
+//var_dump($array);
+
+//$array = [6, 14, 5, 23, 56];
+//$sum = 0;
+//foreach ($array as $num){
+//    $sum += $num;
+//}
+//echo $sum;
+
+
+//$arr = [
+//    0 => ['name' => 'Коля', 'salary' => 300],
+//    1 => ['name' => 'Вася', 'salary' => 400],
+//    2 => ['name' => 'Петя', 'salary' => 500]
+//    ];
+////var_dump($arr);
+//foreach ($arr as $user){
+//    echo "{$user['name']} - {$user['salary']} <br>";
+//}
+
+
+//$arr = [1, 5, 13, 24, -67, 30, 15];
+//echo array_sum($arr) /count($arr);
+
+//$arr = ['Привет',  ', мир', '!'];
+//foreach ($arr as $text){
+//    echo $text;
+//}
+
+//$arr = ['Привет',  ', мир', '!'];
+//
+//$arr[0] = "Пока";
+//
+//echo $arr;
+//
+
+$languages = [
+    'ru' =>['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота', 'Воскресенье'],
+    'en' =>['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+];
+var_dump($languages['ru'][0]);
+var_dump($languages['en'][3]);
+
+
 //for ($i = 1; $i <= 100; $i++){
 //    if ($i % 2 == 0){
 //        echo $i . "";
@@ -69,7 +124,7 @@
 //else{
 //    echo "У числа есть остаток!";
 //}
-
+//
 //$year = 18;
 //if ($year % 4 and $year % 400){
 //    echo "Год високосный!";
@@ -77,7 +132,7 @@
 //else{
 //    echo "Год не високосный!";
 //}
-
+//
 //$month = 1;
 //switch ($month){
 //    case 12:
@@ -147,15 +202,7 @@
 //    }   else{
 //        $result = "Ошибка деление на ноль!";
 //    }
-//?>
-<!--<form method="get">-->
-<!--    <input type="text" name="a" placeholder="Первое число">-->
-<!--    <select name="operation" id="op">-->
-<!--        <option value="+">Сложение</option>-->
-<!--        <option value="-">Вычетание</option>-->
-<!--        <option value="*">Умножение</option>-->
-<!--        <option value="/">Деление</option>-->
-<!--    </select>-->
-<!--    <input type="text" name="b" placeholder="Второе число">-->
-<!--    <input type="submit" value="=">-->
-<!--</form>-->
+//
+
+
+?>
