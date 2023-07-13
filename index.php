@@ -1,5 +1,52 @@
 <?php
 
+//$arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//$seporater = '-';
+//echo implode($seporater, $arr);
+//
+//$one = [1, 2, 3];
+//$two = ['a', 'b', 'c'];
+//var_dump(array_merge($one, $two));
+//
+//$three = ['a', 'b', 'c', 'd', 'e'];
+//var_dump(array_map(function ($item){
+//    return strtoupper($item);
+//}, $three));
+//
+//$four = ['a', '-', 'b', '-', 'c', '-', 'd'];
+//$del = array_splice($four, 1);
+//var_dump($del);
+//var_dump($four);
+//
+//$five = ['a', 'b', 'c', 'd', 'e'];
+//$dela = array_splice($five, 1, 0, "!");
+//$dela = array_splice($five, 3, 0, "!!");
+//var_dump($dela);
+//var_dump($five);
+
+//$array = ['a', 'b', 'c', 'b', 'a'];
+//$countValeus = array_unique($array);
+//var_dump($countValeus);
+
+$six = ['a', 'b', 'c', 'b', 'a'];
+$array = array_count_values($six);
+$six_seven = [];
+for ($i = 0; $i <count($six); $i++){
+    foreach ($array as $a => $b){
+        if ($six[$i] == $a)
+    }
+}
+
+
+//$seven = ['a'=>1, 'b'=>2, 'c'=>3];
+//$rand = array_rand($seven, 2);
+//var_dump($rand);
+//
+//$eignt = ['a', 'b', 'c', 'b', 'a'];
+//$countValeus = array_count_values($eignt);
+//var_dump($countValeus);
+//
+//
 //$array = [];
 //for ($i = 0; $i < 10; $i++) {
 //    $array[$i] = 'x';
@@ -48,12 +95,12 @@
 //echo $arr;
 //
 
-$languages = [
-    'ru' =>['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота', 'Воскресенье'],
-    'en' =>['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-];
-var_dump($languages['ru'][0]);
-var_dump($languages['en'][3]);
+//$languages = [
+//    'ru' =>['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота', 'Воскресенье'],
+//    'en' =>['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+//];
+//var_dump($languages['ru'][0]);
+//var_dump($languages['en'][3]);
 
 
 //for ($i = 1; $i <= 100; $i++){
