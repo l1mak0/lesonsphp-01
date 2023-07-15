@@ -1,5 +1,57 @@
 <?php
 
+//function newUser($name, $age, $address){
+//    return "Имя:{$name}<br>Возраст:{$age}<br>Адрес:{$address}";
+//}
+//
+//echo newUser("Том", 18, "Бабаевского");
+//echo "<br>";
+//echo newUser("Иван", 35, "Савушкина");
+
+
+//function getResult($num_1, $num_2, $oper){
+//    if ($oper == "+"){
+//        $result = $num_1 + $num_2;
+//    }
+//    elseif ($oper == "-"){
+//        $result = $num_1 - $num_2;
+//    }
+//    elseif ($oper == "*"){
+//        $result = $num_1 * $num_2;
+//    }
+//    elseif ($oper == "/"){
+//        $result = $num_1 / $num_2;
+//    }
+//    return $result;
+//}
+//echo getResult(5,2, '+')
+
+//function newUser($name, $age, $address){
+//    if ($age <= 4)
+//        echo $age . "год";
+//    }
+//    return "Имя:{$name}<br>Возраст:{$age}<br>Адрес:{$address}";
+//
+//
+//}
+//
+//echo newUser("Том", 4, "Бабаевского");
+//echo "<br>";
+//echo newUser("Иван", 35, "Савушкина");
+
+
+
+function cut($str,$num = 10){
+    $arr = mb_str_split($str);
+    $result = '';
+    for ($i = 0; $i < $num; $i++){
+        $result .= $arr[$i];
+    }
+    echo $result;
+}
+
+cut('Привет мир!!!!');
+
 //$arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //$seporater = '-';
 //echo implode($seporater, $arr);
@@ -19,25 +71,25 @@
 //var_dump($four);
 //
 //$five = ['a', 'b', 'c', 'd', 'e'];
-//$dela = array_splice($five, 1, 0, "!");
+//$dela = array_splice($five, 1, 0, '!");
 //$dela = array_splice($five, 3, 0, "!!");
 //var_dump($dela);
 //var_dump($five);
-
+//
 //$array = ['a', 'b', 'c', 'b', 'a'];
 //$countValeus = array_unique($array);
 //var_dump($countValeus);
-
-$six = ['a', 'b', 'c', 'b', 'a'];
-$array = array_count_values($six);
-$six_seven = [];
-for ($i = 0; $i <count($six); $i++){
-    foreach ($array as $a => $b){
-        if ($six[$i] == $a)
-    }
-}
-
-
+//
+//$six = ['a', 'b', 'c', 'b', 'a'];
+//$array = array_count_values($six);
+//$six_seven = [];
+//for ($i = 0; $i <count($six); $i++){
+//    foreach ($array as $a => $b){
+//        if ($six[$i] == $a)
+//    }
+//}
+//
+//
 //$seven = ['a'=>1, 'b'=>2, 'c'=>3];
 //$rand = array_rand($seven, 2);
 //var_dump($rand);
@@ -53,22 +105,22 @@ for ($i = 0; $i <count($six); $i++){
 //}
 //
 //var_dump($array);
-
+//
 //$array = [];
 //for ($i = 0; $i < 10; $i++) {
 //    $array[$i] = rand(1,10);
 //}
 //
 //var_dump($array);
-
+//
 //$array = [6, 14, 5, 23, 56];
 //$sum = 0;
 //foreach ($array as $num){
 //    $sum += $num;
 //}
 //echo $sum;
-
-
+//
+//
 //$arr = [
 //    0 => ['name' => 'Коля', 'salary' => 300],
 //    1 => ['name' => 'Вася', 'salary' => 400],
@@ -78,31 +130,31 @@ for ($i = 0; $i <count($six); $i++){
 //foreach ($arr as $user){
 //    echo "{$user['name']} - {$user['salary']} <br>";
 //}
-
-
+//
+//
 //$arr = [1, 5, 13, 24, -67, 30, 15];
 //echo array_sum($arr) /count($arr);
-
+//
 //$arr = ['Привет',  ', мир', '!'];
 //foreach ($arr as $text){
 //    echo $text;
 //}
-
+//
 //$arr = ['Привет',  ', мир', '!'];
 //
 //$arr[0] = "Пока";
 //
 //echo $arr;
 //
-
+//
 //$languages = [
 //    'ru' =>['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота', 'Воскресенье'],
 //    'en' =>['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 //];
 //var_dump($languages['ru'][0]);
 //var_dump($languages['en'][3]);
-
-
+//
+//
 //for ($i = 1; $i <= 100; $i++){
 //    if ($i % 2 == 0){
 //        echo $i . "";
@@ -249,7 +301,6 @@ for ($i = 0; $i <count($six); $i++){
 //    }   else{
 //        $result = "Ошибка деление на ноль!";
 //    }
-//
 
 
 ?>
