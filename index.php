@@ -1,14 +1,43 @@
 <?php
 
+function password($length = 0)
+
+{
+
+    $password = '';
+
+    $arr = array(
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '0','!', '@', ':',
+        ';', '_'
+    );
+
+    for ($i = 0; $i < $length; $i++) {
+
+        $password .= $arr[random_int(0, count($arr))];
+
+    }
+
+    return $password;
+
+}
+
+
+
+echo password(random_int(8,16));
+
+
+
 //function newUser($name, $age, $address){
 //    return "Имя:{$name}<br>Возраст:{$age}<br>Адрес:{$address}";
 //}
 //
 //echo newUser("Том", 18, "Бабаевского");
 //echo "<br>";
-//echo newUser("Иван", 35, "Савушкина");
-
-
+//echo newUser("Иван", 35, "Савушкина")
 //function getResult($num_1, $num_2, $oper){
 //    if ($oper == "+"){
 //        $result = $num_1 + $num_2;
@@ -24,8 +53,7 @@
 //    }
 //    return $result;
 //}
-//echo getResult(5,2, '+')
-
+//echo getResult(5,2, '+'
 //function newUser($name, $age, $address){
 //    if ($age <= 4)
 //        echo $age . "год";
@@ -38,20 +66,16 @@
 //echo newUser("Том", 4, "Бабаевского");
 //echo "<br>";
 //echo newUser("Иван", 35, "Савушкина");
-
-
-
-function cut($str,$num = 10){
-    $arr = mb_str_split($str);
-    $result = '';
-    for ($i = 0; $i < $num; $i++){
-        $result .= $arr[$i];
-    }
-    echo $result;
-}
-
-cut('Привет мир!!!!');
-
+//function cut($str,$num = 10){
+//    $arr = mb_str_split($str);
+//    $result = '';
+//    for ($i = 0; $i < $num; $i++){
+//        $result .= $arr[$i];
+//    }
+//    echo $result;
+//}
+//
+//cut('Привет мир!!!!');
 //$arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //$seporater = '-';
 //echo implode($seporater, $arr);
