@@ -1,36 +1,48 @@
 <?php
-
-function password($length = 0)
-
-{
-
-    $password = '';
-
-    $arr = array(
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-        '1', '2', '3', '4', '5', '6', '7', '8', '9', '0','!', '@', ':',
-        ';', '_'
-    );
-
-    for ($i = 0; $i < $length; $i++) {
-
-        $password .= $arr[random_int(0, count($arr))];
-
+if (!empty($_GET['num_1']) and !empty($_GET['num_2'])){
+    $num_1 = (int)$_GET['num_1'];
+    $num_2 = (int)$_GET['num_2'];
+    $op = $_GET['operation'];
+    switch ($op){
+        case '+': echo $num_1 + $num_2; break;
+        case '-': echo $num_1 - $num_2; break;
+        case '*': echo $num_1 * $num_2; break;
+        case '/': echo $num_1 / $num_2; break;
+        default: echo 'Неизвестная операция!'; break;
     }
-
-    return $password;
-
+}
+else{
+    echo "Данных нет";
 }
 
-
-
-echo password(random_int(8,16));
-
-
-
+//function password($length = 0)
+//
+//{
+//
+//    $password = '';
+//
+//    $arr = array(
+//        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+//        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+//        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+//        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+//        '1', '2', '3', '4', '5', '6', '7', '8', '9', '0','!', '@', ':',
+//        ';', '_'
+//    );
+//
+//    for ($i = 0; $i < $length; $i++) {
+//
+//        $password .= $arr[random_int(0, count($arr))];
+//
+//    }
+//
+//    return $password;
+//
+//}
+//
+//
+//
+//echo password(random_int(8,16));
 //function newUser($name, $age, $address){
 //    return "Имя:{$name}<br>Возраст:{$age}<br>Адрес:{$address}";
 //}
@@ -325,6 +337,15 @@ echo password(random_int(8,16));
 //    }   else{
 //        $result = "Ошибка деление на ноль!";
 //    }
-
-
 ?>
+<form method="get">
+    <input type="text" name="num_1">
+    <select name="operation">
+        <option value="+">Сложить</option>
+        <option value="-">Вычесть</option>
+        <option value="*">Умножить</option>
+        <option value="/">Разделить</option>
+    </select>
+    <input type="text" name="num_2">
+    <input type="submit">
+</form>
